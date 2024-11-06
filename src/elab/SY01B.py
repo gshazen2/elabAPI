@@ -30,6 +30,7 @@ class SY01B(instrument):
 
         self.set_mode(2)
         self.init_pump()
+        self.check_movement()
 
     def compile_cmd(self, command, **kwargs):
         ## Define user input variables with kwargs
