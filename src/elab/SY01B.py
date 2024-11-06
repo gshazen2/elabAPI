@@ -24,6 +24,9 @@ class SY01B(instrument):
     
         if 'address' in kwargs:
             self.address = kwargs.get('address')
+            
+         if 'ports' in kwargs:
+             self.ports = kwargs.get('ports')
 
         if self.verbose == True:
             print(f'{self.model} connected on {com_port} at {self.baud_rate} bits/s')
