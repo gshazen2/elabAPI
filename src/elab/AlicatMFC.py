@@ -16,6 +16,9 @@ class AlicatMFC(instrument):
         if self.verbose == True:
             print(f'{self.model} connected on {com_port} at {self.baud_rate} bits/s')
 
+        self.set_setpoint_mode(34) #Sets MFC setpoint type to PSI
+        self.change_setpoint(40)
+
 
     def compile_cmd(self, command, **kwargs):
         ## Define user input variables
